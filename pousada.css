@@ -1,0 +1,85 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(219, 162, 105);
+    margin: 0;
+}
+
+nav ul {
+    background-color: olive;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    padding: 10px;
+    display: inline-block;
+    background-color: olive;
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px solid olive;
+}
+nav ul li a:hover {
+    background-color: olive;
+    color: orangered;
+    border-bottom: 3px solid orangered;
+
+}
+article, header {
+    margin: 10px;
+} 
+footer p { 
+    text-align: center;
+    font-style: inherit;
+    color: olive;
+    clear: both;
+}
+img {
+    width:800px;
+    height: 500px;
+    float: inline-end;
+    margin-left: 10px;
+}
+/*imagem que é descendente de header com id="pousada" */
+header img#pousada {
+  display: none; /* oculta a imagem */
+}
+article {
+  width: 100%;
+}
+
+/* imagem que é filha de article */
+article > img {
+  width: 60%;
+}
+/* media querys */
+/* para telas menores (ou com no máximo) 900px */
+@media screen and (max-width: 900px) {
+  body{
+    background-color: turquoise;
+  }
+  header img#cachoeira {
+    display: inline; /* exibe a imagem */
+  }
+
+  header img#mapa {
+    display: none; /* oculta a imagem */
+  }
+}
+/* para telas menores (ou com no máximo) 900px */
+@media screen and (max-width: 480px) {
+  body{
+    background-color: lightseagreen;
+    color: sandybrown;
+  }
+  header img#cachoeira {
+    display: none; /* exibe a imagem */
+  }
+
+  header img#pousada {
+    display: none; /* oculta a imagem */
+  }
+}
